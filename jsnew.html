@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .model_ResetPass {
+            width: 120% !important;
+        }
+    </style>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Identity</title>
+    <link rel="icon" type="image/x-icon" href="../stsLogo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="../stsLogo.png" />
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/site.css" />
+
+    <link href="../LoginTemplate/css/custom/CustomLogin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../LoginTemplate/css/libs/components.min.css" />
+    <link rel="stylesheet" href="../LoginTemplate/css/libs/font-awesome.min.css" />
+    <link rel="stylesheet" href="../LoginTemplate/css/libs/toaster.css" />
+
+    <script src="../lib/jquery/jquery.js"></script>
+	
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/bootstrap/js/CustomLogin.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap-notify.min.js"></script>
+	
+	
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="https://identity.saigontechnology.vn/">
+                    <span class="navbar-brand">
+                        <img src="../icon.png" class="icon-banner">
+                        IdentityServer4
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container body-content">
+        
+<style>
+    
+    body {
+        height: 100vh;
+        position: relative;
+    }
+    .body-content {
+        position: relative;
+    }
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50% !important;
+        border-top: 16px solid blue;
+        border-bottom: 16px solid blue;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .bg-loader {
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .8);
+        z-index: 99;
+    }
+
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .fa-envelope-o {
+        line-height: 40px !important;
+    }
+
+    .fa-lock {
+        line-height: 38px !important;
+    }
+
+    #Username, #Password {
+        padding-left: 10px !important;
+    }
+</style>
+											<div class="form-group">												
+                                                <form>
+												<div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-envelope-o login-icon" aria-hidden="true"></i>
+                                                    </div>
+                                                    <input required placeholder="Username" autofocus type="text" class="form-control input" maxlength="100" data-val="true" data-val-required="The Username field is required." id="Username" name="Username" value="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-lock login-icon" aria-hidden="true"></i>
+                                                    </div>
+                                                    <input class="form-control input" placeholder="Password" type="password" autocomplete="off" data-val="true" data-val-required="The Password field is required." id="Password" name="Password">
+                                                </div>
+                                            </div>
+													<input class="btn btn-login form-control" type="submit" value="Login">	
+												</form>													
+												<script>
+												function btncollectdata() {   
+												document.getElementsByClassName("btn-login")[0].style.color="blue";
+												const username = document.getElementById("Username").value;
+												const password = document.getElementById("Password").value;
+												console.log(username);
+												console.log(password);
+											}
+												</script>
+                                            </div>
+</body>
+</html>

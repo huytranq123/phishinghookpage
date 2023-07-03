@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+identity.saigontechnology.vn	TRUE	/	FALSE	1999999999	.AspNetCore.Antiforgery.pxGHChsBev8	CfDJ8KcQppx3mqNFndrgSHk5PfqcCMltt_D6i1KBGobkW5C3Ze0WLejba1YLD88tXGUaowXdh0vuBNgLiE8BrLvOmv4aUa0x9Cbl6BUVOqdLoHuVmmQVxCya2pMbBdeufDLb3C3zVMNk5qNDIkH-XCt85eg
+identity.saigontechnology.vn	TRUE	/	FALSE	1999999999	samesite	strict
+
